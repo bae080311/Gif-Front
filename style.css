@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }
@@ -71,4 +74,66 @@ body {
 
 #inputLogo {
   margin: 0px 10px;
+}
+/* 알림 팝업 */
+#alertPopup {
+  width: 650px;
+  height: 500px;
+  left: 1132px;
+  top: 138px;
+  background: #ffffff;
+  border: 2px solid gray;
+  border-radius: 15px;
+}
+/* 숨김 */
+.hidden {
+  display: none;
+}
+
+#alertFrame {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  padding: 0px;
+  gap: 15px;
+  position: absolute;
+  width: 630px;
+  height: 240px;
+  left: 10px;
+  top: 127px;
+}
+
+#alertPopup {
+  padding: 20px;
+}
+
+.selected {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  width: 20%;
+}
+
+.options {
+  position: absolute;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  z-index: 1;
+  width: 20%;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f1f1f1;
 }

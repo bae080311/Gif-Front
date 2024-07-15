@@ -31,7 +31,7 @@
           </div>
           <div class="icon-wrap">
             <div>
-              <img src="img/imageA.png" alt="Icon A" />
+              <img src="img/imageA.png" alt="filter" onclick="toggle()" />
             </div>
             <div>
               <img src="img/imageB.png" alt="Icon B" />
@@ -44,6 +44,45 @@
       </div>
       <div class="divide-line"></div>
     </header>
+
+    <!-- 필터 팝업 -->
+    <div id="alertPopup" class="hidden">
+      <div id="frame">
+        <div class="custom-dropdown">
+          <div class="selected">분실물</div>
+          <div class="options">
+            <div class="option" data-value="find">
+              <img src="" alt="icon" />찾았습니다
+            </div>
+            <div class="option" data-value="lost">잃어버렸습니다</div>
+          </div>
+        </div>
+
+        <div class="custom-dropdown">
+          <div class="selected">관</div>
+          <div class="options">
+            <div class="option" data-value="mainbuilding">본관</div>
+            <div class="option" data-value="geumbongwan">금봉관</div>
+            <div class="option" data-value="dormitory">기숙사</div>
+          </div>
+        </div>
+
+        <div class="custom-dropdown">
+          <div class="selected">층</div>
+          <div class="options">
+            <div class="option" data-value="1">1층</div>
+            <div class="option" data-value="2">2층</div>
+            <div class="option" data-value="3">3층</div>
+            <div class="option" data-value="4">4층</div>
+            <div class="option" data-value="5">5층</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 알림 팝업 -->
+    <div></div>
+
     <script src="app.js"></script>
   </body>
 </html>
