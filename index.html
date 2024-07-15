@@ -31,10 +31,10 @@
           </div>
           <div class="icon-wrap">
             <div>
-              <img src="img/filter.png" alt="filter" onclick="toggle()" />
+              <img src="img/filter.png" alt="filter" onclick="filterToggle()" />
             </div>
             <div>
-              <img src="img/alert.png" alt="Icon B" />
+              <img src="img/alert.png" alt="alert" onclick="alertToggle()" />
             </div>
             <div>
               <img src="img/profile.png" id="profile" alt="Profile" />
@@ -46,20 +46,22 @@
     </header>
 
     <!-- 필터 팝업 -->
-    <div id="alertPopup" class="hidden">
-      <div id="frame">
+    <div id="filterPopUp" class="hidden">
+      <div class="frame">
         <div class="custom-dropdown">
-          <div class="selected">분실물</div>
+          <div class="selected">
+            <img class="pop" src="img/losing.png" alt="분실물" />분실물
+          </div>
           <div class="options">
-            <div class="option" data-value="find">
-              <img src="" alt="icon" />찾았습니다
-            </div>
-            <div class="option" data-value="lost">잃어버렸습니다</div>
+            <div class="option" data-value="find">찾음</div>
+            <div class="option" data-value="lost">잃어버림</div>
           </div>
         </div>
 
         <div class="custom-dropdown">
-          <div class="selected">관</div>
+          <div class="selected">
+            <img class="pop" src="img/location.png" alt="관" />관
+          </div>
           <div class="options">
             <div class="option" data-value="mainbuilding">본관</div>
             <div class="option" data-value="geumbongwan">금봉관</div>
@@ -68,7 +70,9 @@
         </div>
 
         <div class="custom-dropdown">
-          <div class="selected">층</div>
+          <div class="selected">
+            <img src="img/floor.png" alt="층" class="pop" />층
+          </div>
           <div class="options">
             <div class="option" data-value="1">1층</div>
             <div class="option" data-value="2">2층</div>
@@ -81,7 +85,7 @@
     </div>
 
     <!-- 알림 팝업 -->
-    <div>
+    <div class="hidden" id="alert">
       <div></div>
     </div>
 

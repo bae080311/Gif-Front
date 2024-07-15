@@ -1,5 +1,6 @@
 const profileBtn = document.querySelector("#profile");
-const alert = document.querySelector("#alertPopup");
+const filter = document.querySelector("#filterPopUp");
+const alert = document.querySelector("#alert");
 
 document.querySelectorAll(".custom-dropdown .selected").forEach((dropdown) => {
   dropdown.addEventListener("click", () => {
@@ -27,7 +28,15 @@ document.addEventListener("click", (event) => {
   });
 });
 
-function toggle() {
+function filterToggle() {
+  if (filter.className === "hidden") {
+    filter.classList.remove("hidden");
+  } else {
+    filter.className = "hidden";
+  }
+}
+
+function alertToggle() {
   if (alert.className === "hidden") {
     alert.classList.remove("hidden");
   } else {
