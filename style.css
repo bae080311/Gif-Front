@@ -77,7 +77,6 @@
 #filterPopUp {
   width: 40%;
   height: 300px;
-  left: 1132px;
   top: 138px;
   background: #ffffff;
   border: 1px solid gray;
@@ -138,14 +137,14 @@
   gap: 10px;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 /* 알림창 */
 #alert {
   width: 20%;
   height: 300px;
-  left: 2457px;
-  top: 441px;
   border: 1px solid gray;
+  border-radius: 15px;
 }
 body {
   margin: 0;
@@ -173,4 +172,11 @@ body {
     transform: translateX(50%);
     bottom: 20px;
   }
+}
+
+#filterPopUp,
+#alert {
+  position: absolute;
+  right: 160px;
+  top: 70px;
 }
