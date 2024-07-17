@@ -15,7 +15,7 @@ document.querySelectorAll(".option").forEach((option) => {
     const dropdown = option.closest(".custom-dropdown");
     dropdown.querySelector(".selected").textContent = option.textContent;
     dropdown.querySelector(".selected").dataset.value = option.dataset.value;
-    option.parentElement.style.display = "none";
+    dropdown.querySelector(".options").style.display = "none";
   });
 });
 
@@ -26,23 +26,43 @@ document.addEventListener("click", (event) => {
       options.style.display = "none";
     }
   });
+
+  if (!filter.contains(event.target)) {
+    filter.classList.add("hidden");
+  }
+
+  if (!alert.contains(event.target)) {
+    alert.classList.add("hidden");
+  }
 });
 
-function filterToggle() {
-  if (filter.className === "hidden") {
-    filter.classList.remove("hidden");
-  } else {
-    filter.className = "hidden";
-  }
-}
+document
+  .querySelector("img[alt='filter']")
+  .addEventListener("click", (event) => {
+    event.stopPropagation();
+    filter.classList.toggle("hidden");
+    alert.classList.add("hidden");
 
-function alertToggle() {
-  if (alert.className === "hidden") {
-    alert.classList.remove("hidden");
-  } else {
-    alert.className = "hidden";
-  }
-}
+    document
+      .querySelectorAll(".custom-dropdown .options")
+      .forEach((options) => {
+        options.style.display = "none";
+      });
+  });
+
+document
+  .querySelector("img[alt='alert']")
+  .addEventListener("click", (event) => {
+    event.stopPropagation();
+    alert.classList.toggle("hidden");
+    filter.classList.add("hidden");
+
+    document
+      .querySelectorAll(".custom-dropdown .options")
+      .forEach((options) => {
+        options.style.display = "none";
+      });
+  });
 
 profileBtn.addEventListener("click", () => {
   window.location.href = `/profile?id=${userId}`;
