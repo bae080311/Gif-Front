@@ -89,6 +89,9 @@ body {
   width: 600px;
   border: 1px solid gray;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .input {
   display: flex;
@@ -121,4 +124,30 @@ body {
 }
 input:focus {
   outline: none;
+}
+.profile {
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+  padding-right: 0;
+}
+.chating-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+#each {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 50px;
+}
+.each {
+  list-style: none;
+  border-radius: 16px;
+  background-color: #7e8ef1;
+  padding: 5px;
+  color: white;
+  margin: 10px;
+  max-width: 50%;
 }
