@@ -1,4 +1,4 @@
-const profileBtn = document.querySelector("#profile");
+const profileBtn = document.querySelector(".profile");
 const alertPopup = document.querySelector("#alert");
 
 // 프로필 버튼 클릭 시 프로필 페이지로 이동
