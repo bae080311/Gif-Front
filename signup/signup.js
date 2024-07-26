@@ -15,6 +15,7 @@ function checkEmail() {
     emailError.classList.remove("hidden");
     emailError.innerHTML = "유효하지 않은 이메일 주소입니다.";
   }
+  updateButtonColor(); // 버튼 색상 업데이트 호출
 }
 
 function passwordCheck(password) {
@@ -36,6 +37,7 @@ function checkPassword() {
     passwordError.innerHTML =
       "영문, 숫자, 특수문자를 포함하여 8글자 이상으로 적어주세요";
   }
+  updateButtonColor(); // 버튼 색상 업데이트 호출
 }
 
 function checkConfirmPassword() {
@@ -51,6 +53,24 @@ function checkConfirmPassword() {
   } else {
     confirmPasswordError.classList.remove("hidden");
     confirmPasswordError.innerHTML = "비밀번호가 일치하지 않습니다.";
+  }
+  updateButtonColor(); // 버튼 색상 업데이트 호출
+}
+
+function updateButtonColor() {
+  var emailError = document.getElementById("emailError");
+  var passwordError = document.getElementById("passwordError");
+  var confirmPasswordError = document.getElementById("repasswordError");
+  var button = document.getElementById("bu");
+
+  if (
+    emailError.classList.contains("hidden") &&
+    passwordError.classList.contains("hidden") &&
+    confirmPasswordError.classList.contains("hidden")
+  ) {
+    button.style.backgroundColor = "#615EFC";
+  } else {
+    button.style.backgroundColor = ""; // 기본 배경색으로 되돌리기
   }
 }
 
