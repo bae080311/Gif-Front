@@ -34,7 +34,7 @@ function checkPassword() {
   } else {
     passwordError.classList.remove("hidden");
     passwordError.innerHTML =
-      "비밀번호는 최소 8자 이상, 최소 하나의 숫자, 하나의 소문자, 하나의 특수 문자를 포함해야 합니다.";
+      "영문, 숫자, 특수문자를 포함하여 8글자 이상으로 적어주세요";
   }
 }
 
