@@ -1,7 +1,8 @@
 const profileBtn = document.querySelector("#profile");
+const filtericon = document.querySelector("#filtericon");
+const alerticon = document.querySelector("#alerticon");
 const filter = document.querySelector("#filterPopUp");
 const alert = document.querySelector("#alert");
-
 document.querySelectorAll(".custom-dropdown .selected").forEach((dropdown) => {
   dropdown.addEventListener("click", () => {
     const options = dropdown.nextElementSibling;
@@ -36,33 +37,25 @@ document.addEventListener("click", (event) => {
   }
 });
 
-document
-  .querySelector("img[alt='filter']")
-  .addEventListener("click", (event) => {
-    event.stopPropagation();
-    filter.classList.toggle("hidden");
-    alert.classList.add("hidden");
+filtericon.addEventListener("click", (event) => {
+  event.stopPropagation();
+  filter.classList.toggle("hidden");
+  alert.classList.add("hidden");
 
-    document
-      .querySelectorAll(".custom-dropdown .options")
-      .forEach((options) => {
-        options.style.display = "none";
-      });
+  document.querySelectorAll(".custom-dropdown .options").forEach((options) => {
+    options.style.display = "none";
   });
+});
 
-document
-  .querySelector("img[alt='alert']")
-  .addEventListener("click", (event) => {
-    event.stopPropagation();
-    alert.classList.toggle("hidden");
-    filter.classList.add("hidden");
+alerticon.addEventListener("click", (event) => {
+  event.stopPropagation();
+  alert.classList.toggle("hidden");
+  filter.classList.add("hidden");
 
-    document
-      .querySelectorAll(".custom-dropdown .options")
-      .forEach((options) => {
-        options.style.display = "none";
-      });
+  document.querySelectorAll(".custom-dropdown .options").forEach((options) => {
+    options.style.display = "none";
   });
+});
 
 profileBtn.addEventListener("click", () => {
   window.location.href = `/profile?id=${userId}`;
