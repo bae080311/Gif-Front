@@ -1,3 +1,5 @@
+const URL = "https://a0202de4-b52b-4691-b904-0fd3bd21e6ee.mock.pstmn";
+
 function emailCheck(email) {
   var email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return email_regex.test(email);
@@ -92,3 +94,25 @@ function validateForm() {
   }
   return true;
 }
+
+document.getElementById("bu").addEventListener("click", function () {
+  fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      useremail: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    }),
+  })
+    .then((response) => {
+      return response.text();
+    })
+    .then(() => {
+      window.location.href = "/";
+    })
+    .catch((error) => {
+      console.error("오류:", error);
+    });
+});
