@@ -12,9 +12,12 @@ function checkEmail() {
 
   if (emailCheck(email)) {
     emailError.classList.add("hidden");
+    document.getElementById("email").style.borderColor = "#615EFC";
+
     emailError.innerHTML = "유효한 이메일 주소입니다.";
   } else {
     emailError.classList.remove("hidden");
+    document.getElementById("email").style.borderColor = "#df454a";
     emailError.innerHTML = "유효하지 않은 이메일 주소입니다.";
   }
   updateButtonColor(); // 버튼 색상 업데이트 호출
@@ -33,9 +36,11 @@ function checkPassword() {
 
   if (passwordCheck(password)) {
     passwordError.classList.add("hidden");
+    document.getElementById("password").style.borderColor = "#615EFC";
     passwordError.innerHTML = "유효한 비밀번호입니다.";
   } else {
     passwordError.classList.remove("hidden");
+    document.getElementById("password").style.borderColor = "#df454a";
     passwordError.innerHTML =
       "영문, 숫자, 특수문자를 포함하여 8글자 이상으로 적어주세요";
   }
@@ -51,9 +56,11 @@ function checkConfirmPassword() {
 
   if (password === confirmPassword) {
     confirmPasswordError.classList.add("hidden");
+    document.getElementById("repassword").style.borderColor = "#615EFC";
     confirmPasswordError.innerHTML = "비밀번호가 일치합니다.";
   } else {
     confirmPasswordError.classList.remove("hidden");
+    document.getElementById("repassword").style.borderColor = "#df454a";
     confirmPasswordError.innerHTML = "비밀번호가 일치하지 않습니다.";
   }
   updateButtonColor(); // 버튼 색상 업데이트 호출
