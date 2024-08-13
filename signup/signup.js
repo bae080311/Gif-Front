@@ -13,12 +13,11 @@ function checkEmail() {
   if (emailCheck(email)) {
     emailError.classList.add("hidden");
     document.getElementById("email").style.borderColor = "#615EFC";
-
-    emailError.innerHTML = "유효한 이메일 주소입니다.";
+    document.getElementById("emailError").style.color = "#615EFC";
   } else {
     emailError.classList.remove("hidden");
     document.getElementById("email").style.borderColor = "#df454a";
-    emailError.innerHTML = "유효하지 않은 이메일 주소입니다.";
+    document.getElementById("emailError").style.color = "#df454a";
   }
   updateButtonColor(); // 버튼 색상 업데이트 호출
 }
