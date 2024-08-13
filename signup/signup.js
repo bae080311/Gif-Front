@@ -12,10 +12,11 @@ function checkEmail() {
 
   if (emailCheck(email)) {
     emailError.classList.add("hidden");
-    document.getElementById("email").style.borderColor = "#615EFC";
-    document.getElementById("emailError").style.color = "#615EFC";
+    document.getElementById("email").style.borderColor = "#d8d8d8";
+    document.getElementById("emaillabel").style.color = "black";
   } else {
     emailError.classList.remove("hidden");
+    document.getElementById("emaillabel").style.color = "#df454a";
     document.getElementById("email").style.borderColor = "#df454a";
     document.getElementById("emailError").style.color = "#df454a";
   }
@@ -35,9 +36,12 @@ function checkPassword() {
 
   if (passwordCheck(password)) {
     passwordError.classList.add("hidden");
-    document.getElementById("password").style.borderColor = "#615EFC";
+    document.getElementById("passwordlabel").style.color = "black";
+    document.getElementById("password").style.borderColor = "#d8d8d8";
+    document.getquerySelector("#emaillabel").style.color = "black";
     passwordError.innerHTML = "유효한 비밀번호입니다.";
   } else {
+    document.getElementById("passwordlabel").style.color = "#df454a";
     passwordError.classList.remove("hidden");
     document.getElementById("password").style.borderColor = "#df454a";
     passwordError.innerHTML =
@@ -54,11 +58,13 @@ function checkConfirmPassword() {
   var confirmPassword = confirmPasswordInput.value;
 
   if (password === confirmPassword) {
+    document.getElementById("repasswordlabel").style.color = "black";
     confirmPasswordError.classList.add("hidden");
-    document.getElementById("repassword").style.borderColor = "#615EFC";
+    document.getElementById("repassword").style.borderColor = "#d8d8d8";
     confirmPasswordError.innerHTML = "비밀번호가 일치합니다.";
   } else {
     confirmPasswordError.classList.remove("hidden");
+    document.getElementById("repasswordlabel").style.color = "#df454a";
     document.getElementById("repassword").style.borderColor = "#df454a";
     confirmPasswordError.innerHTML = "비밀번호가 일치하지 않습니다.";
   }
@@ -74,7 +80,10 @@ function updateButtonColor() {
   if (
     emailError.classList.contains("hidden") &&
     passwordError.classList.contains("hidden") &&
-    confirmPasswordError.classList.contains("hidden")
+    confirmPasswordError.classList.contains("hidden") &&
+    document.getElementById("email").value !== "" &&
+    document.getElementById("password").value !== "" &&
+    document.getElementById("repassword").value !== ""
   ) {
     button.style.backgroundColor = "#615EFC";
   } else {
