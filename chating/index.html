@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF</title>
+    <link rel="icon" href="/img/logo.png" />
+    <link rel="stylesheet" href="chating.css" />
+  </head>
+  <body>
+    <header class="topBar">
+      <div class="topBarBackground">
+        <div class="content-wrap">
+          <div class="logo-wrap">
+            <img
+              src="/img/logo.png"
+              onclick="window.location.href='/'"
+              alt="로고"
+            />
+          </div>
+          <div class="input-wrap">
+            <div>
+              <img
+                id="inputLogo"
+                style="width: 36px"
+                src="/img/search.png"
+                alt="검색"
+              />
+              <input style="width: 80%" placeholder="Search..." />
+            </div>
+          </div>
+
+          <div class="icon-wrap">
+            <div>
+              <img src="/img/alert.png" alt="알림" />
+            </div>
+            <div>
+              <img src="/img/profile.png" class="profile" alt="프로필" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divide-line"></div>
+    </header>
+    <div class="container1">
+      <div class="container">
+        <div id="profileContainer">
+          <img src="/img/arrow.png" alt="이전" id="previous" />
+          <div>
+            <img src="/img/profile.png" alt="프로필 이미지" />
+            <h1></h1>
+          </div>
+        </div>
+        <div class="chating-container">
+          <img class="profile" src="/img/profile.png" alt="프로필" />
+          <div class="each">블랄블비라쩌저고 저쩌고 dddddddlllllllllll</div>
+        </div>
+        <div class="input">
+          <input type="text" class="message" />
+          <img src="/img/send.png" alt="전송" class="send" />
+        </div>
+      </div>
+    </div>
+    <!-- 알림 팝업 -->
+    <div class="hidden" id="alert">
+      <div>
+        <h3>알림창</h3>
+      </div>
+    </div>
+    <script src="chating.js"></script>
+  </body>
+</html>
