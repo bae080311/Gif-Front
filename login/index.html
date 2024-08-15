@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="/login/login.css" />
+    <link rel="icon" href="/img/logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="/img/logo.png" alt="로고 이미지" />
+      </div>
+      <form id="signup" method="post">
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input
+            oninput="changeBtnColor()"
+            required
+            type="text"
+            id="email"
+            placeholder="이메일을 입력해주세요..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            placeholder=" 영문, 숫자, 특수문자 2개 이상 포함 8글자 이상"
+            required
+            oninput="changeBtnColor()"
+          />
+        </div>
+        <div class="button">
+          <input type="submit" id="bu" value="로그인" />
+        </div>
+        <div style="display: flex; gap: 5px">
+          <span id="question">아직 회원이 아니신가요?</span>
+          <a href="/signup/index.html">회원가입</a>
+        </div>
+      </form>
+    </div>
+    <script src="/login/login.js"></script>
+  </body>
+</html>
