@@ -151,3 +151,12 @@ input:focus {
   margin: 10px;
   max-width: 50%;
 }
+#profileContainer {
+  width: 600px;
+  height: 70px;
+  border-top: none;
+}
+#previous {
+  width: 24px;
+  height: 24px;
+}
