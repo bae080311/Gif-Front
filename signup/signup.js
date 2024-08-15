@@ -125,7 +125,7 @@ document.getElementById("bu").addEventListener("click", function () {
       return response.text();
     })
     .then(() => {
-      window.location.href = "/";
+      window.location.href = "/login";
     })
     .catch((error) => {
       console.error("오류:", error);
