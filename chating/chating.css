@@ -130,6 +130,7 @@ input:focus {
   height: 24px;
   padding: 10px;
   padding-right: 0;
+  cursor: pointer;
 }
 .chating-container {
   display: flex;

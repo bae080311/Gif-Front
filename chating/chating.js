@@ -33,3 +33,6 @@ document.querySelector("img[alt='알림']").addEventListener("click", (event) =>
 previous.addEventListener("click", () => {
   window.history.back();
 });
+profileBtn.addEventListener("click", () => {
+  window.location.href = `/profile?id=${userId}`;
+});
