@@ -1,6 +1,7 @@
 const profileBtn = document.querySelector(".profile");
 const alertPopup = document.querySelector("#alert");
 const previous = document.querySelector("#previous");
+const messageInput = document.querySelector(".message");
 
 // 프로필 버튼 클릭 시 프로필 페이지로 이동
 profileBtn.addEventListener("click", () => {
@@ -32,7 +33,4 @@ document.querySelector("img[alt='알림']").addEventListener("click", (event) =>
 
 previous.addEventListener("click", () => {
   window.history.back();
-});
-profileBtn.addEventListener("click", () => {
-  window.location.href = `/profile?id=${userId}`;
 });
