@@ -90,8 +90,6 @@ body {
   width: 600px;
   border: 2px solid #cbccce;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   gap: 30px;
   position: relative;
 }
@@ -155,8 +153,10 @@ input:focus {
 }
 #profileContainer {
   width: 600px;
-  height: 70px;
-  border-top: none;
+  height: 110px;
+  border-bottom: 2px solid #cbccce;
+  display: flex;
+  align-items: center;
 }
 #previous {
   width: 24px;
@@ -177,4 +177,9 @@ input:focus {
 #name {
   font-size: 20px;
   font-weight: bold;
+}
+#post {
+  width: 72px;
+  height: 72px;
+  margin: 10px;
 }
