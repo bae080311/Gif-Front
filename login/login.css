@@ -43,6 +43,7 @@ img {
   justify-content: center;
   align-items: center;
   height: 12vh;
+  margin-top: 5vh;
 }
 
 #bu {
@@ -93,6 +94,10 @@ img {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .error-message-hidden {
   color: #df454a;
   font-size: small;
@@ -102,4 +107,12 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #3269f6;
+}
+#question {
+  color: #8f9094;
 }
