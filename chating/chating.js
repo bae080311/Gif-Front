@@ -1,5 +1,6 @@
 const profileBtn = document.querySelector(".profile");
 const alertPopup = document.querySelector("#alert");
+const previous = document.querySelector("#previous");
 
 // 프로필 버튼 클릭 시 프로필 페이지로 이동
 profileBtn.addEventListener("click", () => {
@@ -27,4 +28,8 @@ document.querySelector("img[alt='알림']").addEventListener("click", (event) =>
   document.querySelectorAll(".custom-dropdown .options").forEach((options) => {
     options.style.display = "none";
   });
+});
+
+previous.addEventListener("click", () => {
+  window.history.back();
 });
