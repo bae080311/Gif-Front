@@ -16,6 +16,7 @@
         <div class="form-group">
           <label for="email">이메일</label>
           <input
+            oninput="changeBtnColor()"
             required
             type="text"
             id="email"
@@ -29,6 +30,7 @@
             id="password"
             placeholder=" 영문, 숫자, 특수문자 2개 이상 포함 8글자 이상"
             required
+            oninput="changeBtnColor()"
           />
         </div>
         <div class="button">
