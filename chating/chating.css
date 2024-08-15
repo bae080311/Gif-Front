@@ -93,6 +93,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
 }
 .input {
   display: flex;
@@ -106,7 +107,7 @@ body {
 }
 .message {
   padding: 12px 20px;
-  width: 510px;
+  width: 85%;
   height: 15px;
   background: white;
   border: 1px solid #cbccce;
@@ -162,4 +163,18 @@ input:focus {
   height: 24px;
   cursor: pointer;
   margin: 10px;
+  position: absolute;
+  left: 10px;
+}
+#inform {
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 2px solid #cbccce;
+  display: flex;
+  align-items: center;
+}
+#name {
+  font-size: 20px;
+  font-weight: bold;
 }
