@@ -84,14 +84,14 @@ body {
   height: 300px;
   border: 1px solid gray;
   border-radius: 15px;
+  background-color: white;
 }
 .container {
   width: 600px;
-  border: 1px solid gray;
+  border: 2px solid #cbccce;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   gap: 30px;
+  position: relative;
 }
 .input {
   display: flex;
@@ -105,7 +105,7 @@ body {
 }
 .message {
   padding: 12px 20px;
-  width: 510px;
+  width: 85%;
   height: 15px;
   background: white;
   border: 1px solid #cbccce;
@@ -130,6 +130,7 @@ input:focus {
   height: 24px;
   padding: 10px;
   padding-right: 0;
+  cursor: pointer;
 }
 .chating-container {
   display: flex;
@@ -143,11 +144,46 @@ input:focus {
   gap: 50px;
 }
 .each {
+  border-top-left-radius: 0;
   list-style: none;
-  border-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
   background-color: #7e8ef1;
   padding: 5px;
   color: white;
   margin: 10px;
   max-width: 50%;
+}
+#profileContainer {
+  width: 600px;
+  height: 110px;
+  border-bottom: 2px solid #cbccce;
+  display: flex;
+  align-items: center;
+}
+#previous {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 10px;
+  position: absolute;
+  left: 10px;
+}
+#inform {
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 2px solid #cbccce;
+  display: flex;
+  align-items: center;
+}
+#name {
+  font-size: 20px;
+  font-weight: bold;
+}
+#post {
+  width: 72px;
+  height: 72px;
+  margin: 10px;
 }
